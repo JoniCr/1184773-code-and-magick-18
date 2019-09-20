@@ -69,5 +69,4 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.fillText('Ура вы победили!', CLOUD_X + FONT_HEIGHT, CLOUD_Y + FONT_HEIGHT + GAP);
   ctx.fillText('Список результатов:', CLOUD_X + FONT_HEIGHT, CLOUD_Y + FONT_HEIGHT + FONT_HEIGHT + GAP);
 
-
 };
