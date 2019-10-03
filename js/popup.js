@@ -52,14 +52,24 @@ setupClose.addEventListener('keydown', function (evt) {
   }
 });
 
-wizardCoat.addEventListener('click', function () {
-  wizardCoat.style.fill = getRandomElmFromArr(COAT_COLORS);
-});
+function onWizardCoatClick() {
+  var currentColor = getRandomElmFromArr(COAT_COLORS);
+  wizardCoat.style.fill = currentColor;
+  document.querySelector('input[name="coat-color"]').value = currentColor;
+}
 
-wizardEyes.addEventListener('click', function () {
-  wizardEyes.style.fill = getRandomElmFromArr(EYES_COLORS);
-});
+function onWizardEyesClick() {
+  var currentColor = getRandomElmFromArr(EYES_COLORS);
+  wizardEyes.style.fill = currentColor;
+  document.querySelector('input[name="eyes-color"]').value = currentColor;
+}
 
-fireball.addEventListener('click', function () {
-  fireball.style.backgroundColor = getRandomElmFromArr(FIREBALL_COLORS);
-});
+function onFireballClick() {
+  var currentColor = getRandomElmFromArr(FIREBALL_COLORS);
+  fireball.style.backgroundColor = currentColor;
+  document.querySelector('input[name="fireball-color"]').value = currentColor;
+}
+
+wizardCoat.addEventListener('click', onWizardCoatClick);
+wizardEyes.addEventListener('click', onWizardEyesClick);
+fireball.addEventListener('click', onFireballClick);
